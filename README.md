@@ -1,6 +1,7 @@
 # Bombcrypto Autoclicker
 
 First time running:
+
 Run the script named "get_pos.py" using the following command (Windows):
 " Start-Process -NoNewWindow python get_pos.py "
 
@@ -16,7 +17,7 @@ Then, start the click routine in the following order:
 
 5."Connect Wallet" Button
 
-6. Metamask Confirmation
+6.Metamask Confirmation
 
 7.Treasure Hunt
 
@@ -37,6 +38,8 @@ Then, start the click routine in the following order:
 15.Next Map (The position of this button is between the last two indestructible blocks in the middle column)
 
 16.Back to Main Menu (Green arrow in the upper left corner)
+
+======================================================================================================================================================================
 
 After finishing this process, a file called "config.txt" will be generated with the coordinates in this order.
 
