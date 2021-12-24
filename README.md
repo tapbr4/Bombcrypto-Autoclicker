@@ -43,7 +43,8 @@ Then, start the click routine in the following order:
 16.Back to Main Menu (Green arrow in the upper left corner)
 
 
-
 After finishing this process, a file called "config.txt" will be generated with the coordinates in this order.
 
 Run the script called "main.py" and avoid using the computer while it is running. The autoclicker will be farming for you on a frequency of 2 hours (1h farming and 1h resting).
+
+!!! The coordinate capture process does not need to be done in the next runs. Just start "main.py" !!!
