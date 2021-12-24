@@ -5,6 +5,7 @@ Run the script named "get_pos.py" using the following command (Windows):
 " Start-Process -NoNewWindow python get_pos.py "
 
 Then, start the click routine in the following order:
+
 1.Browser Icon (Taskbar)
 
 2.Address Bar
