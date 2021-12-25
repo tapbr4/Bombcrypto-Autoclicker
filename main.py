@@ -76,11 +76,13 @@ while True:
     ## 1hour farm / Next Map
     pyautogui.click(x=pos['map'][0], y=pos['map'][1], clicks=2, interval=0.5)
     for i in range(60): 
-        sleep(20) 
+        sleep(15) 
         pyautogui.click(x=pos['next_map'][0], y=pos['next_map'][1])
-        sleep(20)
+        sleep(15)
+        pyautogui.click(x=pos['metamask_confirm'][0], y=pos['metamask_confirm'][1])
+        sleep(15)
         pyautogui.click(x=pos['connect_wallet'][0], y=pos['connect_wallet'][1])
-        sleep(20)
+        sleep(15)
         pyautogui.click(x=pos['metamask_confirm'][0], y=pos['metamask_confirm'][1])
     sleep(5) 
 
