@@ -1,5 +1,7 @@
 # Bombcrypto Autoclicker
 
+!!! Before running any script, make sure your browser is open and Metamask is already logged in. !!!
+
 First time running:
 
 
