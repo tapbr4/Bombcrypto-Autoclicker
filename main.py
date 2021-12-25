@@ -42,6 +42,7 @@ while True:
     sleep(6)
 
     ## Play / Metamask Confirmation
+    print('PLAY NOW!')
     pyautogui.click(x=pos['play_now'][0], y=pos['play_now'][1])
     sleep(10)
     pyautogui.hotkey('alt', 'tab')
@@ -56,6 +57,7 @@ while True:
     sleep(25)
 
     ## In-game / Work
+    print('PUTTING TO WORK')
     pyautogui.click(x=pos['treasure_hunt'][0], y=pos['treasure_hunt'][1])
     sleep(5)
     pyautogui.click(x=pos['map'][0], y=pos['map'][1], clicks=2, interval=0.5)
@@ -77,6 +79,7 @@ while True:
     sleep(5)
 
     ## 1hour farm / Next Map
+    print('1 HOUR FARM')
     pyautogui.click(x=pos['map'][0], y=pos['map'][1], clicks=2, interval=0.5)
     for i in range(60): 
         sleep(10)
@@ -85,13 +88,19 @@ while True:
         pyautogui.click(x=pos['connect_wallet'][0], y=pos['connect_wallet'][1])
         sleep(15)
         pyautogui.click(x=pos['metamask_icon'][0], y=pos['metamask_icon'][1], clicks=2, interval=0.25)
-        sleep(10)
+        sleep(5)
         pyautogui.click(x=pos['metamask_confirm'][0], y=pos['metamask_confirm'][1])
         sleep(15)
         pyautogui.click(x=pos['treasure_hunt'][0], y=pos['treasure_hunt'][1])
-    sleep(5) 
+        if(i in [15,30,45]):
+            sleep(3)
+            pyautogui.click(x=pos['main_menu'][0], y=pos['main_menu'][1])
+            sleep(3)
+            pyautogui.click(x=pos['treasure_hunt'][0], y=pos['treasure_hunt'][1])
+    sleep(5)
 
     ## Rest
+    print('PUTTING TO REST')
     pyautogui.click(x=pos['menu_arrow'][0], y=pos['menu_arrow'][1])
     sleep(5)
     pyautogui.click(x=pos['heroes'][0], y=pos['heroes'][1])
@@ -124,4 +133,5 @@ while True:
     pyautogui.hotkey('ctrl', 'w')
 
     ## Rest 1h (+1h farm = 2h frequency)
+    print('REST 1H')
     sleep(3600) #2h = 7200s
