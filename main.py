@@ -5,8 +5,9 @@ import pyautogui
 
 # Setup #
 name_list = [
-    'browser_icon','address_bar','play_now',
-    'connect_wallet','metamask_confirm',
+    'browser_icon','address_bar',
+    'play_now', 'connect_wallet',
+    'metamask_icon','metamask_confirm',
     'treasure_hunt','menu_arrow',
     'heroes','character_list',
     'work','rest','close',
@@ -42,13 +43,15 @@ while True:
 
     ## Play / Metamask Confirmation
     pyautogui.click(x=pos['play_now'][0], y=pos['play_now'][1])
-    sleep(20)
+    sleep(10)
     pyautogui.hotkey('alt', 'tab')
-    sleep(2)
+    sleep(3)
     pyautogui.hotkey('ctrl', 'w')
     sleep(5)
     pyautogui.click(x=pos['connect_wallet'][0], y=pos['connect_wallet'][1])
-    sleep(25)
+    sleep(20)
+    pyautogui.click(x=pos['metamask_icon'][0], y=pos['metamask_icon'][1], clicks=2, interval=0.25)
+    sleep(5)
     pyautogui.click(x=pos['metamask_confirm'][0], y=pos['metamask_confirm'][1])
     sleep(25)
 
@@ -76,14 +79,16 @@ while True:
     ## 1hour farm / Next Map
     pyautogui.click(x=pos['map'][0], y=pos['map'][1], clicks=2, interval=0.5)
     for i in range(60): 
-        sleep(15) 
+        sleep(10)
         pyautogui.click(x=pos['next_map'][0], y=pos['next_map'][1])
-        sleep(15)
-        pyautogui.click(x=pos['metamask_confirm'][0], y=pos['metamask_confirm'][1])
-        sleep(15)
+        sleep(10)
         pyautogui.click(x=pos['connect_wallet'][0], y=pos['connect_wallet'][1])
         sleep(15)
+        pyautogui.click(x=pos['metamask_icon'][0], y=pos['metamask_icon'][1], clicks=2, interval=0.25)
+        sleep(10)
         pyautogui.click(x=pos['metamask_confirm'][0], y=pos['metamask_confirm'][1])
+        sleep(15)
+        pyautogui.click(x=pos['treasure_hunt'][0], y=pos['treasure_hunt'][1])
     sleep(5) 
 
     ## Rest

@@ -7,8 +7,8 @@ print('Running...')
 # After opening your Browser and logging into Metamask
 name_list = [
     'Browser Icon (Taskbar)', 'Address Bar', '"Play Now!" Button', 
-    '"Connect Wallet" Button', 'Metamask Confirmation', 'Treasure Hunt', 
-    'In-game Menu Arrow', 'Heroes Button', 'Character List (center)', 
+    '"Connect Wallet" Button', 'Metamask Icon (Taskbar)', 'Metamask Confirmation', 
+    'Treasure Hunt', 'In-game Menu Arrow', 'Heroes Button', 'Character List (center)', 
     'Last Work Button', 'First Rest Button', 'Close Button (Char List)', 
     'Back to Treasure Hunt', 'Next Map', 'Back to Main Menu']
 lines = []
