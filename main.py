@@ -26,12 +26,13 @@ for item in lines:
     count += 1
 
 # Auto #
-## Opening Browser (Once, when running the script)
+## Opening Browser
 pyautogui.click(x=pos['browser_icon'][0], y=pos['browser_icon'][1])
 sleep(3)
 
 ## Loop
 while True:
+    print('\n[STARTING LOOP]')
     ## Entering the Website
     pyautogui.click(x=pos['address_bar'][0], y=pos['address_bar'][1])
     sleep(3)
@@ -54,7 +55,7 @@ while True:
     pyautogui.click(x=pos['metamask_icon'][0], y=pos['metamask_icon'][1], clicks=2, interval=0.25)
     sleep(5)
     pyautogui.click(x=pos['metamask_confirm'][0], y=pos['metamask_confirm'][1])
-    sleep(25)
+    sleep(30)
 
     ## In-game / Work
     print('PUTTING TO WORK')
@@ -78,11 +79,12 @@ while True:
     pyautogui.click(x=pos['close'][0], y=pos['close'][1], clicks=2, interval=1.5)
     sleep(5)
 
-    ## 1hour farm / Next Map
+    ## Working 1h (+1minute and 6 seconds)
+    ## Click routine to go to the next map and avoid error messages.
     print('1 HOUR FARM')
     pyautogui.click(x=pos['map'][0], y=pos['map'][1], clicks=2, interval=0.5)
     for i in range(60): 
-        sleep(10)
+        sleep(15)
         pyautogui.click(x=pos['next_map'][0], y=pos['next_map'][1])
         sleep(10)
         pyautogui.click(x=pos['connect_wallet'][0], y=pos['connect_wallet'][1])
@@ -92,7 +94,8 @@ while True:
         pyautogui.click(x=pos['metamask_confirm'][0], y=pos['metamask_confirm'][1])
         sleep(15)
         pyautogui.click(x=pos['treasure_hunt'][0], y=pos['treasure_hunt'][1])
-        if(i in [15,30,45]):
+        ### Prevents bombers from walking around without placing bombs.
+        if(i%5==0 and i!=0): # Runs 11 times. (+1 minute and 6 seconds)
             sleep(3)
             pyautogui.click(x=pos['main_menu'][0], y=pos['main_menu'][1])
             sleep(3)
@@ -132,6 +135,6 @@ while True:
     sleep(2)
     pyautogui.hotkey('ctrl', 'w')
 
-    ## Rest 1h (+1h farm = 2h frequency)
+    ## Resting 1h (+1h farm = 2h frequency)
     print('REST 1H')
-    sleep(3600) #2h = 7200s
+    sleep(3600) # 1h = 3600s
