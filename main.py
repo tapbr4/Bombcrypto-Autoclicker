@@ -13,7 +13,7 @@ name_list = [
     'treasure_hunt','menu_arrow',
     'heroes','character_list',
     'work','rest','close',
-    'map','next_map','main_menu']
+    'map','main_menu']
 pos = []
 
 # Read config.txt #
@@ -21,15 +21,15 @@ with open('config.txt') as f:
     lines = f.read().splitlines()
 
 # Dict #
-line = 0
+line = 0 # Total 15 clicks captured <-
 for browser in range(1, browsers+1):
     pos.append(dict())
     count = 0
-    for item in lines[line:(browser*16)]:
+    for item in lines[line:(browser*15)]: # <-
         t_item = make_tuple(item)
         pos[browser-1][name_list[count]] = t_item
         count += 1
-    line += 16
+    line += 15 # <-
 
 # Auto #
 ## Opening Browser
@@ -76,13 +76,14 @@ while True:
         pyautogui.click(x=pos[i]['heroes'][0], y=pos[i]['heroes'][1])
         sleep(5)
         pyautogui.click(x=pos[i]['character_list'][0], y=pos[i]['character_list'][1])
-        sleep(3)
-        for j in range(45):
-            pyautogui.scroll(-1)
-        sleep(3)
-        for j in range(16):
-            pyautogui.click(x=pos[i]['work'][0], y=pos[i]['work'][1])
-            sleep(3)
+        sleep(3) 
+        pyautogui.click(x=pos[i]['work'][0], y=pos[i]['work'][1]) # Work Button (All)
+        # for j in range(45):
+        #     pyautogui.scroll(-1)
+        # sleep(3)
+        # for j in range(16):
+        #     pyautogui.click(x=pos[i]['work'][0], y=pos[i]['work'][1])
+        #     sleep(3)
         sleep(2)
         pyautogui.click(x=pos[i]['close'][0], y=pos[i]['close'][1], clicks=2, interval=1.5)
         sleep(5)
@@ -90,13 +91,10 @@ while True:
         sleep(5)
 
     ## Working 1h (+Some sleep based on number of accounts)
-    ## Click routine to go to the next map and avoid error messages.
+    ## Click routine to avoid error messages.
     print('WORKING 1H [{}]'.format(str(datetime.now().hour) + ':' + str(datetime.now().minute)))
     for i in range(60):
-        sleep(15)
-        for j in range(browsers):
-            pyautogui.click(x=pos[j]['next_map'][0], y=pos[j]['next_map'][1])
-        sleep(15)
+        sleep(30)
         for j in range(browsers):
             pyautogui.click(x=pos[j]['connect_wallet'][0], y=pos[j]['connect_wallet'][1])
         sleep(15)
@@ -126,12 +124,13 @@ while True:
         sleep(5)
         pyautogui.click(x=pos[i]['character_list'][0], y=pos[i]['character_list'][1])
         sleep(3)
-        for j in range(45):
-            pyautogui.scroll(1)
-        sleep(3)
-        for j in range(16):
-            pyautogui.click(x=pos[i]['rest'][0], y=pos[i]['rest'][1])
-            sleep(3)
+        pyautogui.click(x=pos[i]['rest'][0], y=pos[i]['rest'][1]) # Rest Button (All)
+        # for j in range(45):
+        #     pyautogui.scroll(1)
+        # sleep(3)
+        # for j in range(16):
+        #     pyautogui.click(x=pos[i]['rest'][0], y=pos[i]['rest'][1])
+        #     sleep(3)
         sleep(2)
         pyautogui.click(x=pos[i]['close'][0], y=pos[i]['close'][1], clicks=2, interval=1.5)
         sleep(5)
@@ -153,4 +152,4 @@ while True:
 
     ## Resting 1h (+1h farm = 2h frequency)
     print('RESTING 1H [{}]'.format(str(datetime.now().hour) + ':' + str(datetime.now().minute)))
-    sleep(3600-(85*browsers)) # 1h = 3600s | 85s = Total Sleep (Putting to Rest)
+    sleep(3600-(37*browsers)) # 1h = 3600s | 37s = Total Sleep (Putting to Rest)
