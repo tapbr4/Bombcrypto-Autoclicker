@@ -34,17 +34,15 @@ Then, start the click routine in the following order:
 
 11.Center of character list (only to select frame and then scroll)
 
-12.Last Work Button (Scroll down)
+12.Work Button (All)
 
-13.First Rest Button (Scroll Up)
+13.Rest Button (All)
 
 14.Close Button (Char List)
 
 15.Back to Treasure Hunt (Click once in the middle of the map)
 
-16.Next Map (The position of this button is between the last two indestructible blocks in the middle column)
-
-17.Back to Main Menu (Green arrow in the upper left corner)
+16.Back to Main Menu (Green arrow in the upper left corner)
 
 
 After finishing this process, a file called "config.txt" will be generated with the coordinates in this order.
