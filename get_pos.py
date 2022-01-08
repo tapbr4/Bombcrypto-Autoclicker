@@ -7,7 +7,7 @@
 from pynput import mouse
 
 
-accounts = 2 #Enter the number of accounts/browsers here
+browsers = 2 #Enter the number of accounts/browsers here
 browser = 1 #Just a counter. Keep the value 1!
 
 name_list = [
@@ -22,7 +22,7 @@ count = 0
 print('Running...')
 
 def on_click(x, y, button, pressed):
-    global accounts
+    global browsers
     global browser
     global count
 
@@ -35,7 +35,7 @@ def on_click(x, y, button, pressed):
         browser += 1
         count = 0
 
-    if browser > accounts:
+    if browser > browsers:
         with open('config.txt', 'w') as f:
             f.write('\n'.join(lines))
 

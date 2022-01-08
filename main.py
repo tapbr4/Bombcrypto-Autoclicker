@@ -48,13 +48,13 @@ while True:
         pyautogui.press('enter')
         sleep(2)
         pyautogui.press('enter')
-        sleep(2)
+        sleep(5)
 
         ## Play / Metamask Confirmation
         pyautogui.click(x=pos[i]['play_now'][0], y=pos[i]['play_now'][1])
         sleep(5)
         pyautogui.hotkey('alt', 'tab')
-        sleep(3)
+        sleep(5)
         pyautogui.hotkey('ctrl', 'w')
         sleep(5)
         pyautogui.click(x=pos[i]['connect_wallet'][0], y=pos[i]['connect_wallet'][1])
@@ -77,7 +77,7 @@ while True:
         sleep(5)
         pyautogui.click(x=pos[i]['character_list'][0], y=pos[i]['character_list'][1])
         sleep(3) 
-        pyautogui.click(x=pos[i]['work'][0], y=pos[i]['work'][1]) # Work Button (All)
+        pyautogui.click(x=pos[i]['work'][0], y=pos[i]['work'][1], clicks=3, interval=2) # Work Button (All)
         # for j in range(45):
         #     pyautogui.scroll(-1)
         # sleep(3)
@@ -124,7 +124,7 @@ while True:
         sleep(5)
         pyautogui.click(x=pos[i]['character_list'][0], y=pos[i]['character_list'][1])
         sleep(3)
-        pyautogui.click(x=pos[i]['rest'][0], y=pos[i]['rest'][1]) # Rest Button (All)
+        pyautogui.click(x=pos[i]['rest'][0], y=pos[i]['rest'][1], clicks=2, interval=2) # Rest Button (All)
         # for j in range(45):
         #     pyautogui.scroll(1)
         # sleep(3)
