@@ -4,7 +4,8 @@
 
 First time running:
 
-
+Change the variable called "browsers" to indicate the number of accounts you want to activate the autoclicker on.
+Variable "browsers" at (Line 8 - main.py) and (Line 10 - get_pos.py).
 
 Run the script named "get_pos.py" using the following command (Windows):
 
