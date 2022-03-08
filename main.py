@@ -3,12 +3,13 @@ from datetime import datetime
 from time import sleep
 import pyautogui
 
+pyautogui.FAILSAFE = False
 
 # Setup #
 browsers = 2 #Enter the number of accounts/browsers here
 name_list = [
     'browser_icon','address_bar',
-    'play_now', 'connect_wallet',
+    'play_now', 'connect_wallet', 'metamask',
     'metamask_icon','metamask_confirm',
     'treasure_hunt','menu_arrow',
     'heroes','character_list',
@@ -21,15 +22,15 @@ with open('config.txt') as f:
     lines = f.read().splitlines()
 
 # Dict #
-line = 0 # Total 15 clicks captured <-
+line = 0 # Total 16 clicks captured <-
 for browser in range(1, browsers+1):
     pos.append(dict())
     count = 0
-    for item in lines[line:(browser*15)]: # <-
+    for item in lines[line:(browser*16)]: # <-
         t_item = make_tuple(item)
         pos[browser-1][name_list[count]] = t_item
         count += 1
-    line += 15 # <-
+    line += 16 # <-
 
 # Auto #
 ## Opening Browser
@@ -44,20 +45,23 @@ while True:
     for i in range(browsers):
         pyautogui.click(x=pos[i]['address_bar'][0], y=pos[i]['address_bar'][1])
         sleep(2)
-        pyautogui.write('https://bombcrypto.io/')   
+        pyautogui.write('https://app.bombcrypto.io/')
+        sleep(2)
         pyautogui.press('enter')
         sleep(2)
         pyautogui.press('enter')
-        sleep(5)
+        sleep(25) #10
 
         ## Play / Metamask Confirmation
-        pyautogui.click(x=pos[i]['play_now'][0], y=pos[i]['play_now'][1])
-        sleep(5)
-        pyautogui.hotkey('alt', 'tab')
-        sleep(5)
-        pyautogui.hotkey('ctrl', 'w')
-        sleep(5)
-        pyautogui.click(x=pos[i]['connect_wallet'][0], y=pos[i]['connect_wallet'][1])
+##        pyautogui.click(x=pos[i]['play_now'][0], y=pos[i]['play_now'][1])
+##        sleep(10)
+##        pyautogui.hotkey('alt', 'tab')
+##        sleep(15)
+##        pyautogui.hotkey('ctrl', 'w')
+##        sleep(10)
+        pyautogui.click(x=pos[i]['connect_wallet'][0], y=pos[i]['connect_wallet'][1], clicks=2, interval=1)
+        sleep(10)
+        pyautogui.click(x=pos[i]['metamask'][0], y=pos[i]['metamask'][1], clicks=2, interval=1)
         sleep(15)
         pyautogui.click(x=pos[i]['metamask_icon'][0], y=pos[i]['metamask_icon'][1], clicks=2, interval=0.25)
         sleep(5)
@@ -145,11 +149,11 @@ while True:
 
         ## Close Tab
         pyautogui.hotkey('ctrl', 't')
-        sleep(3)
+        sleep(8)
         pyautogui.hotkey('alt', 'tab')
-        sleep(3)
+        sleep(8)
         pyautogui.hotkey('ctrl', 'w')
 
     ## Resting 1h (+1h farm = 2h frequency)
     print('RESTING 1H [{}]'.format(str(datetime.now().hour) + ':' + str(datetime.now().minute)))
-    sleep(3600-(37*browsers)) # 1h = 3600s | 37s = Total Sleep (Putting to Rest)
+    sleep(3600-(47*browsers)) # 1h = 3600s | 47s = Total Sleep (Putting to Rest)

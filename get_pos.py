@@ -12,7 +12,8 @@ browser = 1 #Just a counter. Keep the value 1!
 
 name_list = [
     'Browser Icon (Taskbar)', 'Address Bar', '"Play Now!" Button', 
-    '"Connect Wallet" Button', 'Metamask Icon (Taskbar)', 'Metamask Confirmation', 
+    '"Connect Wallet" Button', 'Login Metamask',
+    'Metamask Icon (Taskbar)', 'Metamask Confirmation', 
     'Treasure Hunt', 'In-game Menu Arrow', 'Heroes Button', 'Character List (center)', 
     'Work Button (All)', 'Rest Button (All)', 'Close Button (Char List)', 
     'Back to Treasure Hunt', 'Back to Main Menu']

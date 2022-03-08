@@ -23,27 +23,29 @@ Then, start the click routine in the following order:
 
 5."Connect Wallet" Button
 
-6.Metamask Icon (Taskbar) - !!! Use alt+tab to return the window if clicking it minimized it !!!
+6."Metamask" in the login window
 
-7.Metamask Confirmation
+7.Metamask Icon (Taskbar) - !!! Use alt+tab to return the window if clicking it minimized it !!!
 
-8.Treasure Hunt
+8.Metamask Confirmation
 
-9.In-game Menu (Arrow)
+9.Treasure Hunt
 
-10.Heroes Button
+10.In-game Menu (Arrow)
 
-11.Center of character list (only to select frame and then scroll)
+11.Heroes Button
 
-12.Work Button (All)
+12.Center of character list (only to select frame and then scroll)
 
-13.Rest Button (All)
+13.Work Button (All)
 
-14.Close Button (Char List)
+14.Rest Button (All)
 
-15.Back to Treasure Hunt (Click once in the middle of the map)
+15.Close Button (Char List)
 
-16.Back to Main Menu (Green arrow in the upper left corner)
+16.Back to Treasure Hunt (Click once in the middle of the map)
+
+17.Back to Main Menu (Green arrow in the upper left corner)
 
 
 After finishing this process, a file called "config.txt" will be generated with the coordinates in this order.
