@@ -26,7 +26,7 @@ line = 0 # Total 16 clicks captured <-
 for browser in range(1, browsers+1):
     pos.append(dict())
     count = 0
-    for item in lines[line:(browser*16)]: # <-
+    for item in lines[line:(browser*15)]: # <-
         t_item = make_tuple(item)
         pos[browser-1][name_list[count]] = t_item
         count += 1
