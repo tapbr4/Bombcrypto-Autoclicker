@@ -30,7 +30,8 @@ for browser in range(1, browsers+1):
         t_item = make_tuple(item)
         pos[browser-1][name_list[count]] = t_item
         count += 1
-    line += 16 # <-
+    line += 15 # <-
+
 
 # Auto #
 ## Opening Browser
