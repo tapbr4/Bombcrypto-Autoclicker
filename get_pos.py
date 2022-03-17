@@ -11,7 +11,7 @@ browsers = 2 #Enter the number of accounts/browsers here
 browser = 1 #Just a counter. Keep the value 1!
 
 name_list = [
-    'Browser Icon (Taskbar)', 'Address Bar', '"Play Now!" Button', 
+    'Browser Icon (Taskbar)', 'Address Bar', 
     '"Connect Wallet" Button', 'Login Metamask',
     'Metamask Icon (Taskbar)', 'Metamask Confirmation', 
     'Treasure Hunt', 'In-game Menu Arrow', 'Heroes Button', 'Character List (center)', 

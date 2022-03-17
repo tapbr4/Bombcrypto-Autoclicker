@@ -2,6 +2,9 @@
 
 !!! Before running any script, make sure your browser is open and Metamask is already logged in. !!!
 
+!!! Install "AdBlock" extension to prevent accidental clicks on ads !!!
+
+
 First time running:
 
 Change the variable called "browsers" to indicate the number of accounts you want to activate the autoclicker on.
@@ -17,35 +20,33 @@ Then, start the click routine in the following order:
 
 2.Address Bar
 
-3.Write the url "https://bombcrypto.io/" using the keyboard only (No additional clicks)
+3.Write the url "https://app.bombcrypto.io/" using the keyboard only (No additional clicks)
 
-4."Play Now!" button
+4."Connect Wallet" Button
 
-5."Connect Wallet" Button
+5."Metamask" in the login window
 
-6."Metamask" in the login window
+6.Metamask Icon (Taskbar) - !!! Use alt+tab to return the window if clicking it minimized it !!!
 
-7.Metamask Icon (Taskbar) - !!! Use alt+tab to return the window if clicking it minimized it !!!
+7.Metamask Confirmation
 
-8.Metamask Confirmation
+8.Treasure Hunt
 
-9.Treasure Hunt
+9.In-game Menu (Arrow)
 
-10.In-game Menu (Arrow)
+10.Heroes Button
 
-11.Heroes Button
+11.Center of character list (only to select frame and then scroll)
 
-12.Center of character list (only to select frame and then scroll)
+12.Work Button (All)
 
-13.Work Button (All)
+13.Rest Button (All)
 
-14.Rest Button (All)
+14.Close Button (Char List)
 
-15.Close Button (Char List)
+15.Back to Treasure Hunt (Click once in the middle of the map)
 
-16.Back to Treasure Hunt (Click once in the middle of the map)
-
-17.Back to Main Menu (Green arrow in the upper left corner)
+16.Back to Main Menu (Green arrow in the upper left corner)
 
 
 After finishing this process, a file called "config.txt" will be generated with the coordinates in this order.

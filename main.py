@@ -9,7 +9,7 @@ pyautogui.FAILSAFE = False
 browsers = 2 #Enter the number of accounts/browsers here
 name_list = [
     'browser_icon','address_bar',
-    'play_now', 'connect_wallet', 'metamask',
+    'connect_wallet', 'metamask',
     'metamask_icon','metamask_confirm',
     'treasure_hunt','menu_arrow',
     'heroes','character_list',
