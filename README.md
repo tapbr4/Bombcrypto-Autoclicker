@@ -4,6 +4,10 @@
 
 !!! Install "AdBlock" extension to prevent accidental clicks on ads !!!
 
+!!! Avoid using the computer while running !!!
+
+!!! Avoid opening windows and taking up the Metamask icon position when opened on the taskbar. !!!
+
 
 First time running:
 
