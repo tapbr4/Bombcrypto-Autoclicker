@@ -4,8 +4,6 @@
 
 !!! Install "AdBlock" extension to prevent accidental clicks on ads !!!
 
-!!! Avoid using the computer while running !!!
-
 !!! Avoid opening windows and taking up the Metamask icon position when opened on the taskbar. !!!
 
 
@@ -14,9 +12,15 @@ First time running:
 Change the variable called "browsers" to indicate the number of accounts you want to activate the autoclicker on.
 Variable "browsers" at (Line 8 - main.py) and (Line 10 - get_pos.py).
 
-Run the script named "get_pos.py" using the following command (Windows):
+Run the script 'get_pos.pyw'. 
 
-" Start-Process -NoNewWindow python get_pos.py "
+!!! 
+
+If double clicking on 'get_pos.pyw' doesn't work, run using the following command (Windows PowerShell): 
+
+" Start-Process -NoNewWindow python get_pos.pyw "
+
+!!!
 
 Then, start the click routine in the following order:
 
