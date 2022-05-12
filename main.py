@@ -104,9 +104,12 @@ while True:
             pyautogui.click(x=pos[j]['connect_wallet'][0], y=pos[j]['connect_wallet'][1])
         sleep(15)
         for j in range(browsers):
+            sleep(1)
+            pyautogui.click(x=pos[j]['metamask'][0], y=pos[j]['metamask'][1], clicks=2, interval=1)
+            sleep(1)
             pyautogui.click(x=pos[j]['metamask_icon'][0], y=pos[j]['metamask_icon'][1], clicks=2, interval=0.25)
             sleep(1)
-            pyautogui.click(x=pos[j]['metamask_confirm'][0], y=pos[j]['metamask_confirm'][1], clicks=2, interval=0.25)
+            pyautogui.click(x=pos[j]['metamask_confirm'][0], y=pos[j]['metamask_confirm'][1], clicks=2, interval=0.25)      
         sleep(15)
         for j in range(browsers):
             pyautogui.click(x=pos[j]['treasure_hunt'][0], y=pos[j]['treasure_hunt'][1])
